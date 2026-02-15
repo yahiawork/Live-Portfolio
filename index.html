@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio | Yahia Saad</title>
+  <meta name="description" content="Personal portfolio with a dynamic binary background." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/favicon-32x32.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <!-- Google Identity Services (optional) -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+  <!-- Background -->
+  <canvas id="binary-canvas" aria-hidden="true"></canvas>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="nav">
+      <div class="brand" aria-label="Brand">Yahia's <span>Portfolio</span></div>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div id="googleSignIn"></div>
+        <button id="logoutBtn" class="btn" type="button" hidden>Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero reveal" id="top">
+      <div class="hero-left card">
+        <div class="hero-avatar">
+          <img src="./assets/icon.png" alt="Yahia Saad" class="hero-img" />
+        </div>
+
+        <div class="kicker">HELLO WORLD</div>
+        <h1 class="type-title">I build modern, high-impact digital experiences.</h1>
+        <p class="lead">
+          Developer portfolio with a dynamic binary background, focused on performance, clean UI, and real-world projects.
+        </p>
+
+        <div class="cta">
+          <button class="btn primary" type="button" id="viewProjectsBtn">View Projects</button>
+          <button class="btn" type="button" id="aboutMeBtn">My Name's Yahia</button>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="stats">
+          <div class="card stat experience reveal">
+            <strong>1+</strong>
+            <span>Years Experience</span>
+          </div>
+          <div class="card stat projects reveal">
+            <strong>9+</strong>
+            <span>Projects</span>
+          </div>
+          <div class="card stat commitment reveal">
+            <strong>100%</strong>
+            <span>Commitment</span>
+          </div>
+        </div>
+
+        <div class="card-see mini-note reveal" role="note">
+          <div class="tag">Fast • Clean • Animated</div>
+          <p class="muted">
+            This template is optimized for GitHub Pages, Live Server, and static hosting.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="reveal">
+      <h2>About Me</h2>
+
+      <div class="about-content">
+        <div class="about-text card">
+          <p>I'm a passionate software developer focused on building modern, high-performance web and desktop applications.</p>
+          <p>I enjoy transforming ideas into real, scalable products through clean architecture, optimized code, and thoughtful UI/UX design.</p>
+          <p>With hands-on experience in full-stack development, I specialize in JavaScript, React, Node.js, Python, and modern development workflows.</p>
+        </div>
+
+        <div class="skills card">
+          <h3>Skills & Technologies</h3>
+
+          <div class="skills-grid">
+            <div class="skill-item" data-skill="90">
+              <div class="skill-top">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-item" data-skill="85">
+              <div class="skill-top">
+                <span class="skill-name">React</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-item" data-skill="80">
+              <div class="skill-top">
+                <span class="skill-name">Node.js</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-item" data-skill="99">
+              <div class="skill-top">
+                <span class="skill-name">Python</span>
+                <span class="skill-pct">99%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-item" data-skill="95">
+              <div class="skill-top">
+                <span class="skill-name">CSS</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-item" data-skill="95">
+              <div class="skill-top">
+                <span class="skill-name">HTML</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-item" data-skill="95">
+              <div class="skill-top">
+                <span class="skill-name">Java</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-item" data-skill="34">
+              <div class="skill-top">
+                <span class="skill-name">C#</span>
+                <span class="skill-pct">34%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-item" data-skill="86">
+              <div class="skill-top">
+                <span class="skill-name">C++</span>
+                <span class="skill-pct">86%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-item" data-skill="67">
+              <div class="skill-top">
+                <span class="skill-name">GDScript</span>
+                <span class="skill-pct">67%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-item" data-skill="79">
+              <div class="skill-top">
+                <span class="skill-name">Others</span>
+                <span class="skill-pct">79%</span>
+              </div>
+              <div class="skill-bar"><div class="skill-fill"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="reveal">
+      <h2>Services</h2>
+
+      <div class="services-grid">
+        <article class="service-card card reveal">
+          <h3>Portfolio Website Development</h3>
+          <p>Designing and developing modern, responsive portfolio websites that showcase your skills, projects, and personal brand.</p>
+          <button class="btn service-btn" type="button" data-action="fiverr">View on Fiverr</button>
+        </article>
+
+        <article class="service-card card reveal">
+          <h3>Full-Stack E-commerce Development</h3>
+          <p>Building secure and scalable full-stack e-commerce apps with modern frontend and backend technologies such as React and Node.js.</p>
+          <button class="btn service-btn" type="button" data-action="fiverr">View on Fiverr</button>
+        </article>
+
+        <article class="service-card card reveal">
+          <h3>C++ / Python Applications</h3>
+          <p>Developing efficient desktop or backend applications using C++ or Python, focusing on performance, reliability, and clean architecture.</p>
+          <button class="btn service-btn" type="button" data-action="fiverr">View on Fiverr</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="reveal">
+      <h2>Selected Projects</h2>
+
+      <div class="grid">
+        <article class="card project reveal">
+          <span class="tag">Android · AI</span>
+          <h3>Saad Parc</h3>
+          <p>AI-powered Android app for logistics companies to securely manage and preserve vehicle registration documents for truck fleets.</p>
+        </article>
+
+        <article class="card project reveal">
+          <span class="tag">Java · Math Solver</span>
+          <h3>CyMath</h3>
+          <p>A smart, user-friendly math solver that helps learners solve equations and arithmetic problems quickly and accurately.</p>
+        </article>
+
+        <article class="card project reveal">
+          <span class="tag">Qt5 · AI Assistant</span>
+          <h3>Write Script</h3>
+          <p>An AI-powered desktop app that assists content creators, screenwriters, and filmmakers in writing high-quality scripts efficiently.</p>
+        </article>
+
+        <article class="card project reveal">
+          <span class="tag">Unity · Game</span>
+          <h3>Erire: The Horror Game</h3>
+          <p>First-person horror game made with Unity, featuring AI-driven enemy behavior, custom animations, and Blender-made 3D assets.</p>
+        </article>
+
+        <article class="card project reveal">
+          <span class="tag">Flask · Security</span>
+          <h3>Dark Store</h3>
+          <p>Flask-based digital game store simulation designed around security concepts and privacy-oriented tools.</p>
+        </article>
+
+        <article class="card project reveal">
+          <span class="tag">Python · Text-to-Speech</span>
+          <h3>TTS AI</h3>
+          <p>AI-powered text-to-speech app built with Python and ML libraries to provide natural and efficient voice generation.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="reveal">
+      <h2>Contact</h2>
+
+      <div class="contact card">
+        <div class="contact-left">
+          <h3 class="contact-title">Let's build something real.</h3>
+          <p class="muted">Sign in (optional) to enable the form button. The demo form uses a local-only toast.</p>
+
+          <div class="contact-meta">
+            <div class="pill"><span class="dot"></span> Available for freelance</div>
+            <div class="pill"><span class="dot"></span> Full-stack & Desktop</div>
+            <div class="pill"><span class="dot"></span> Clean UI/UX</div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <label class="sr-only" for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+
+          <input type="hidden" id="email" name="email" />
+
+          <label class="sr-only" for="message">Your message</label>
+          <textarea id="message" name="message" placeholder="Your message" required></textarea>
+
+          <button id="sendBtn" class="btn primary" type="submit" disabled>Sign in to Send</button>
+          <p class="hint muted">Tip: you can connect this to Formspree / EmailJS later (see README).</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Welcome Modal -->
+  <div id="welcomeModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle" hidden>
+    <div class="modal card">
+      <img id="userAvatar" alt="User avatar" />
+      <h3 id="welcomeTitle">Welcome</h3>
+      <p id="welcomeName" class="modal-name"></p>
+      <p id="welcomeEmail" class="muted"></p>
+
+      <div class="modal-actions">
+        <button class="btn primary" type="button" id="closeWelcomeBtn">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- To top -->
+  <button id="toTop" class="to-top" type="button" aria-label="Back to top">↑</button>
+
+  <!-- Scripts -->
+  <script src="./js/main.js" defer></script>
+</body>
+</html>
